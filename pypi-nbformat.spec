@@ -4,7 +4,7 @@
 #
 Name     : pypi-nbformat
 Version  : 5.1.3
-Release  : 52
+Release  : 53
 URL      : https://files.pythonhosted.org/packages/e5/bd/847367dcc514b198936a3de8bfaeda1935e67ce369bf0b3e7f3ed4616ae8/nbformat-5.1.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/e5/bd/847367dcc514b198936a3de8bfaeda1935e67ce369bf0b3e7f3ed4616ae8/nbformat-5.1.3.tar.gz
 Summary  : The Jupyter Notebook format
@@ -15,10 +15,6 @@ Requires: pypi-nbformat-license = %{version}-%{release}
 Requires: pypi-nbformat-python = %{version}-%{release}
 Requires: pypi-nbformat-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-Provides: nbformat
-Provides: nbformat-python
-Provides: nbformat-python3
-BuildRequires : jsonschema
 BuildRequires : pypi(ipython_genutils)
 BuildRequires : pypi(jsonschema)
 BuildRequires : pypi(jupyter_core)
@@ -77,7 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641458163
+export SOURCE_DATE_EPOCH=1641520897
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
