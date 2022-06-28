@@ -4,7 +4,7 @@
 #
 Name     : pypi-nbformat
 Version  : 5.4.0
-Release  : 58
+Release  : 59
 URL      : https://files.pythonhosted.org/packages/2c/ed/ce3e63f5e757442cbb01ac45683fb0338d48f7e824606957d933bc831a58/nbformat-5.4.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/2c/ed/ce3e63f5e757442cbb01ac45683fb0338d48f7e824606957d933bc831a58/nbformat-5.4.0.tar.gz
 Summary  : The Jupyter Notebook format
@@ -79,7 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1656390322
+export SOURCE_DATE_EPOCH=1656392315
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
