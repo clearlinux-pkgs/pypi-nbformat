@@ -4,7 +4,7 @@
 #
 Name     : pypi-nbformat
 Version  : 5.4.0
-Release  : 64
+Release  : 65
 URL      : https://files.pythonhosted.org/packages/2c/ed/ce3e63f5e757442cbb01ac45683fb0338d48f7e824606957d933bc831a58/nbformat-5.4.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/2c/ed/ce3e63f5e757442cbb01ac45683fb0338d48f7e824606957d933bc831a58/nbformat-5.4.0.tar.gz
 Summary  : The Jupyter Notebook format
@@ -20,6 +20,9 @@ BuildRequires : pypi(jsonschema)
 BuildRequires : pypi(jupyter_core)
 BuildRequires : pypi(setuptools)
 BuildRequires : pypi(traitlets)
+# Suppress stripping binaries
+%define __strip /bin/true
+%define debug_package %{nil}
 
 %description
 # The Jupyter Notebook Format
@@ -79,12 +82,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1656392315
+export SOURCE_DATE_EPOCH=1672291982
 export GCC_IGNORE_WERROR=1
-export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$FFLAGS -fno-lto "
-export FFLAGS="$FFLAGS -fno-lto "
-export CXXFLAGS="$CXXFLAGS -fno-lto "
+export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
@@ -101,7 +104,7 @@ popd
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-nbformat
-cp %{_builddir}/nbformat-5.4.0/COPYING.md %{buildroot}/usr/share/package-licenses/pypi-nbformat/8fd549f28c3423c251b3b70e91bdad2fbfe6ef30
+cp %{_builddir}/nbformat-%{version}/COPYING.md %{buildroot}/usr/share/package-licenses/pypi-nbformat/8fd549f28c3423c251b3b70e91bdad2fbfe6ef30 || :
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
