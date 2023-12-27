@@ -5,7 +5,7 @@
 #
 Name     : pypi-nbformat
 Version  : 5.9.2
-Release  : 69
+Release  : 70
 URL      : https://files.pythonhosted.org/packages/54/d8/31dceef56952da6ea2c43405a83c9759a22a86cb530197988cfa8599b178/nbformat-5.9.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/54/d8/31dceef56952da6ea2c43405a83c9759a22a86cb530197988cfa8599b178/nbformat-5.9.2.tar.gz
 Summary  : The Jupyter Notebook format
