@@ -1,5 +1,5 @@
 PKG_NAME := pypi-nbformat
-URL = https://files.pythonhosted.org/packages/ad/c1/adfa72efcf08421a0bd6e3f9a14d6e0e2e52bf9ad7bd881d664f221708be/nbformat-5.10.3.tar.gz
+URL = https://files.pythonhosted.org/packages/6d/fd/91545e604bc3dad7dca9ed03284086039b294c6b3d75c0d2fa45f9e9caf3/nbformat-5.10.4.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
